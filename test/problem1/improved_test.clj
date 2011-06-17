@@ -20,4 +20,16 @@
   (is (= (sum-multiples 10 4 0) 12))
   (is (= (sum-multiples 10 0 4) 12))
   (is (= (sum-multiples 10000 0 0) 0))
-  (is (= (sum-multiples 5000000000 8 7) 3124999997500000005)))
+  (is (= (sum-multiples 5000000000 8 7) 3124999997500000005))
+  (is (= (sum-multiples 5 10 20) 0)))
+
+;test sum-of-multiples function
+;test for zero argument
+;test up to 5 billion
+(deftest sum-of-multiples-test
+  (is (= (sum-of-multiples 10 5) 5))
+  (is (= (sum-of-multiples 10 4) 12))
+  (is (= (sum-of-multiples 2 1) 1))
+  (is (= (sum-of-multiples 1 2) 0))
+  (is (= (sum-of-multiples 0 0) 0))
+  (is (= (sum-of-multiples 5000000000 1) 12499999997500000000)))
